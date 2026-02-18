@@ -1,0 +1,952 @@
+[
+    {
+        "name": "The Taj Mahal Expedition",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 15000,
+        "summary": "Witness the breathtaking beauty of the Taj Mahal and explore Agra's rich history.",
+        "description": "Embark on a journey to the symbol of love, the Taj Mahal. This 3-day tour includes visits to the Agra Fort and Fatehpur Sikri.",
+        "imageCover": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-10",
+            "2026-04-15"
+        ],
+        "state": "Uttar Pradesh"
+    },
+    {
+        "name": "Kerala Backwaters Retreat",
+        "duration": 5,
+        "maxGroupSize": 10,
+        "price": 25000,
+        "summary": "Relax on a houseboat cruise through the serene backwaters of Alleppey.",
+        "description": "Experience the tranquility of Kerala's backwaters on a traditional houseboat. Enjoy authentic Kerala cuisine and Ayurvedic massages.",
+        "imageCover": "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-20",
+            "2026-05-01"
+        ],
+        "state": "Kerala"
+    },
+    {
+        "name": "Goa Beach Bonanza",
+        "duration": 4,
+        "maxGroupSize": 20,
+        "price": 18000,
+        "summary": "Sun, sand, and sea! Enjoy the vibrant nightlife and pristine beaches of Goa.",
+        "description": "A perfect getaway for beach lovers. Explore North and South Goa, indulge in water sports, and party at famous clubs.",
+        "imageCover": "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-05",
+            "2026-04-10"
+        ],
+        "state": "Goa"
+    },
+    {
+        "name": "Ladakh Bike Adventure",
+        "duration": 8,
+        "maxGroupSize": 12,
+        "price": 45000,
+        "summary": "Conquer the highest motorable roads in the world on a thrilling bike trip to Ladakh.",
+        "description": "Ride through the rugged terrains of Ladakh, visit Pangong Lake, and cross Khardung La pass.",
+        "imageCover": "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-06-15",
+            "2026-07-20"
+        ],
+        "state": "Ladakh"
+    },
+    {
+        "name": "Jaipur Royal Heritage",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 12000,
+        "summary": "Explore the Pink City's majestic forts, palaces, and vibrant bazaars.",
+        "description": "Visit Amer Fort, City Palace, and Hawa Mahal. Shop for colorful textiles and jewelry in Jaipur's famous markets.",
+        "imageCover": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-25",
+            "2026-05-10"
+        ],
+        "state": "Rajasthan"
+    },
+    {
+        "name": "Varanasi Spiritual Walk",
+        "duration": 2,
+        "maxGroupSize": 10,
+        "price": 8000,
+        "summary": "Experience the spiritual essence of India in the ancient city of Varanasi.",
+        "description": "Witness the Ganga Aarti, take a boat ride on the Ganges, and explore the narrow alleys of Kashi.",
+        "imageCover": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-15",
+            "2026-04-25"
+        ],
+        "state": "Uttar Pradesh"
+    },
+    {
+        "name": "Rishikesh Yoga Retreat",
+        "duration": 5,
+        "maxGroupSize": 10,
+        "price": 20000,
+        "summary": "Rejuvenate your mind and body in the Yoga Capital of the World.",
+        "description": "Daily yoga and meditation sessions by the Ganges. Adventure activities like rafting are also included.",
+        "imageCover": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-05",
+            "2026-05-15"
+        ],
+        "state": "Uttarakhand"
+    },
+    {
+        "name": "Manali Snow Escape",
+        "duration": 4,
+        "maxGroupSize": 15,
+        "price": 16000,
+        "summary": "Enjoy snow-capped mountains and lush valleys in Manali.",
+        "description": "Visit Solang Valley for adventure sports, explore Hadimba Temple, and walk through the pine forests.",
+        "imageCover": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-01",
+            "2026-04-01"
+        ],
+        "state": "Himachal Pradesh"
+    },
+    {
+        "name": "Mysore Palace Tour",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 6000,
+        "summary": "Visit the majestic Mysore Palace and experience the royal heritage of Karnataka.",
+        "description": "Explore the opulent Mysore Palace, Chamundi Hill, and the beautiful Brindavan Gardens.",
+        "imageCover": "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-12",
+            "2026-05-20"
+        ],
+        "state": "Karnataka"
+    },
+    {
+        "name": "Darjeeling Tea Trail",
+        "duration": 4,
+        "maxGroupSize": 12,
+        "price": 18000,
+        "summary": "Sip world-famous tea amidst the rolling hills of Darjeeling.",
+        "description": "Visit tea gardens, watch the sunrise from Tiger Hill, and take a ride on the Darjeeling Himalayan Railway.",
+        "imageCover": "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-10",
+            "2026-05-25"
+        ],
+        "state": "West Bengal"
+    },
+    {
+        "name": "Hampi Ruins Exploration",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 10000,
+        "summary": "Step back in time at the UNESCO World Heritage site of Hampi.",
+        "description": "Explore the ancient ruins of the Vijayanagara Empire, Virupaksha Temple, and the surreal boulder landscape.",
+        "imageCover": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-18",
+            "2026-04-22"
+        ],
+        "state": "Karnataka"
+    },
+    {
+        "name": "Udaipur Lake City Tour",
+        "duration": 3,
+        "maxGroupSize": 10,
+        "price": 14000,
+        "summary": "Experience the romance of Udaipur, the City of Lakes.",
+        "description": "Boat ride on Lake Pichola, visit City Palace, and admire the beautiful architecture of Jag Mandir.",
+        "imageCover": "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-28",
+            "2026-05-05"
+        ],
+        "state": "Rajasthan"
+    },
+    {
+        "name": "Munnar Hill Station Getaway",
+        "duration": 3,
+        "maxGroupSize": 12,
+        "price": 12000,
+        "summary": "Breathe in the fresh air of Munnar's tea plantations.",
+        "description": "Trek through tea gardens, visit Eravikulam National Park, and enjoy the misty hills of Kerala.",
+        "imageCover": "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-02",
+            "2026-05-12"
+        ],
+        "state": "Kerala"
+    },
+    {
+        "name": "Andaman Island Hop",
+        "duration": 6,
+        "maxGroupSize": 10,
+        "price": 35000,
+        "summary": "Explore the pristine beaches and coral reefs of the Andaman Islands.",
+        "description": "Scuba dive in Havelock Island, visit Cellular Jail in Port Blair, and relax on Radhanagar Beach.",
+        "imageCover": "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-08",
+            "2026-04-18"
+        ],
+        "state": "Andaman and Nicobar Islands"
+    },
+    {
+        "name": "Golden Temple Pilgrimage",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 5000,
+        "summary": "Visit the holiest shrine of Sikhism, the Golden Temple in Amritsar.",
+        "description": "Experience the peace of the Golden Temple, visit Jallianwala Bagh, and witness the Wagah Border ceremony.",
+        "imageCover": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-22",
+            "2026-05-08"
+        ],
+        "state": "Punjab"
+    },
+    {
+        "name": "Ooty Scenic Train Ride",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 10000,
+        "summary": "Ride the heritage Nilgiri Mountain Railway to the Queen of Hill Stations.",
+        "description": "Boating in Ooty Lake, visit Botanical Gardens, and enjoy the panoramic views from Doddabetta Peak.",
+        "imageCover": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-08",
+            "2026-05-18"
+        ],
+        "state": "Tamil Nadu"
+    },
+    {
+        "name": "Kaziranga Wildlife Safari",
+        "duration": 4,
+        "maxGroupSize": 8,
+        "price": 22000,
+        "summary": "Spot the one-horned rhinoceros in the wild terrain of Kaziranga.",
+        "description": "Jeep and elephant safaris in Kaziranga National Park to see rhinos, tigers, and wild elephants.",
+        "imageCover": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-03",
+            "2026-04-03"
+        ],
+        "state": "Assam"
+    },
+    {
+        "name": "Rann of Kutch Desert",
+        "duration": 3,
+        "maxGroupSize": 12,
+        "price": 14000,
+        "summary": "Walk on the white salt desert under the moonlit sky.",
+        "description": "Experience the Rann Utsav, cultural performances, and the mesmerizing white desert landscape.",
+        "imageCover": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-11-01",
+            "2026-12-15"
+        ],
+        "state": "Gujarat"
+    },
+    {
+        "name": "Meghalaya Living Root Bridges",
+        "duration": 5,
+        "maxGroupSize": 8,
+        "price": 24000,
+        "summary": "Trek to the incredible living root bridges in the abode of clouds.",
+        "description": "Visit Cherrapunji, Dawki River, and trek to the Double Decker Root Bridge in Nongriat.",
+        "imageCover": "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-12",
+            "2026-05-22"
+        ],
+        "state": "Meghalaya"
+    },
+    {
+        "name": "Mahabalipuram Shore Temples",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 7000,
+        "summary": "Marvel at the rock-cut temples and sculptures of Mahabalipuram.",
+        "description": "Visit the Shore Temple, Pancha Rathas, and Arjuna's Penance, all UNESCO World Heritage sites.",
+        "imageCover": "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-30",
+            "2026-05-02"
+        ],
+        "state": "Tamil Nadu"
+    },
+    {
+        "name": "Jaisalmer Desert Safari",
+        "duration": 3,
+        "maxGroupSize": 10,
+        "price": 11000,
+        "summary": "Camp in the Thar Desert and explore the Golden City.",
+        "description": "Camel safari in Sam Sand Dunes, folk dance, and a visit to the magnificent Jaisalmer Fort.",
+        "imageCover": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-11-10",
+            "2026-12-20"
+        ],
+        "state": "Rajasthan"
+    },
+    {
+        "name": "Coorg Coffee Trails",
+        "duration": 3,
+        "maxGroupSize": 12,
+        "price": 13000,
+        "summary": "Walk through aromatic coffee plantations in the Scotland of India.",
+        "description": "Stay in a homestay, visit Abbey Falls, and trek to Mandalpatti peak.",
+        "imageCover": "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-20",
+            "2026-05-30"
+        ],
+        "state": "Karnataka"
+    },
+    {
+        "name": "Sundarbans Boat Safari",
+        "duration": 4,
+        "maxGroupSize": 10,
+        "price": 20000,
+        "summary": "Explore the largest mangrove forest in the world.",
+        "description": "Boat safari to spot the Royal Bengal Tiger, crocodiles, and exotic birds.",
+        "imageCover": "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-01",
+            "2026-03-30"
+        ],
+        "state": "West Bengal"
+    },
+    {
+        "name": "Pondicherry French Quarter",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 9000,
+        "summary": "Experience the French colonial charm on the Coromandel Coast.",
+        "description": "Walk through White Town, visit Auroville, and relax on Promenade Beach.",
+        "imageCover": "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-10",
+            "2026-04-10"
+        ],
+        "state": "Puducherry"
+    },
+    {
+        "name": "Ajanta and Ellora Caves",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 11000,
+        "summary": "Marvel at the ancient rock-cut caves and paintings.",
+        "description": "Explore the UNESCO World Heritage sites of Ajanta and Ellora, known for Buddhist, Hindu, and Jain monuments.",
+        "imageCover": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-20",
+            "2026-04-20"
+        ],
+        "state": "Maharashtra"
+    },
+    {
+        "name": "Spiti Valley Road Trip",
+        "duration": 7,
+        "maxGroupSize": 8,
+        "price": 30000,
+        "summary": "Drive through the rough terrains of the cold desert mountain valley.",
+        "description": "Visit Key Monastery, Chandratal Lake, and the world's highest post office in Hikkim.",
+        "imageCover": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-06-01",
+            "2026-07-01"
+        ],
+        "state": "Himachal Pradesh"
+    },
+    {
+        "name": "Khajuraho Temple Tour",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 6500,
+        "summary": "Admire the intricate erotic sculptures of Khajuraho temples.",
+        "description": "Guided tour of the Western and Eastern group of temples, showcasing Nagara style architecture.",
+        "imageCover": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-05",
+            "2026-04-05"
+        ],
+        "state": "Madhya Pradesh"
+    },
+    {
+        "name": "Gokarna Beach Trek",
+        "duration": 3,
+        "maxGroupSize": 12,
+        "price": 8000,
+        "summary": "Trek across the serene beaches of Gokarna.",
+        "description": "Beach hopping from Om Beach to Kudle Beach and Half Moon Beach. Visit Mahabaleshwar Temple.",
+        "imageCover": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-25",
+            "2026-04-25"
+        ],
+        "state": "Karnataka"
+    },
+    {
+        "name": "Valley of Flowers Trek",
+        "duration": 6,
+        "maxGroupSize": 10,
+        "price": 18000,
+        "summary": "Witness a riot of colors in the Valley of Flowers National Park.",
+        "description": "Trek from Govindghat to Ghangaria and explore the valley full of endemic alpine flowers.",
+        "imageCover": "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-07-15",
+            "2026-08-15"
+        ],
+        "state": "Uttarakhand"
+    },
+    {
+        "name": "Alleppey Houseboat Stay",
+        "duration": 2,
+        "maxGroupSize": 6,
+        "price": 10000,
+        "summary": "A peaceful overnight stay on a luxury houseboat.",
+        "description": "Cruise through the Vembanad Lake, enjoy local fish curry, and sleep under the stars.",
+        "imageCover": "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-12",
+            "2026-04-12"
+        ],
+        "state": "Kerala"
+    },
+    {
+        "name": "Konark Sun Temple Visit",
+        "duration": 2,
+        "maxGroupSize": 15,
+        "price": 5000,
+        "summary": "See the architectural marvel of the Sun Temple in Konark.",
+        "description": "Visit the UNESCO World Heritage site designed as a chariot, and relax on Chandrabhaga Beach.",
+        "imageCover": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-02-28",
+            "2026-03-28"
+        ],
+        "state": "Odisha"
+    },
+    {
+        "name": "Mount Abu Hill Station",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 9000,
+        "summary": "The only hill station in the deserts of Rajasthan.",
+        "description": "Visit Dilwara Temples, Nakki Lake, and enjoy the sunset from Sunset Point.",
+        "imageCover": "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-18",
+            "2026-04-18"
+        ],
+        "state": "Rajasthan"
+    },
+    {
+        "name": "Kodaikanal Lake Mist",
+        "duration": 3,
+        "maxGroupSize": 12,
+        "price": 10000,
+        "summary": "Princess of Hill Stations, full of granite cliffs and waterfalls.",
+        "description": "Rowing in Kodaikanal Lake, walking on Coaker's Walk, and visiting Pillar Rocks.",
+        "imageCover": "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-05",
+            "2026-05-05"
+        ],
+        "state": "Tamil Nadu"
+    },
+    {
+        "name": "Tawang Monastery Tour",
+        "duration": 6,
+        "maxGroupSize": 8,
+        "price": 28000,
+        "summary": "Visit the second largest monastery in the world in Arunachal Pradesh.",
+        "description": "Drive through Sela Pass, visit Tawang Monastery, and serene Madhuri Lake.",
+        "imageCover": "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-15",
+            "2026-05-15"
+        ],
+        "state": "Arunachal Pradesh"
+    },
+    {
+        "name": "Gir Lion Safari",
+        "duration": 3,
+        "maxGroupSize": 10,
+        "price": 15000,
+        "summary": "The only home of the Asiatic Lions.",
+        "description": "Jungle safari in Gir National Park to spot lions, leopards, and diverse bird species.",
+        "imageCover": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-05",
+            "2026-04-05"
+        ],
+        "state": "Gujarat"
+    },
+    {
+        "name": "Nainital Lake City",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 9000,
+        "summary": "Boating in the eye-shaped Naini Lake surrounded by mountains.",
+        "description": "Visit Naini Peak, Eco Cave Gardens, and shop at Mall Road.",
+        "imageCover": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-20",
+            "2026-05-20"
+        ],
+        "state": "Uttarakhand"
+    },
+    {
+        "name": "Pushkar Camel Fair",
+        "duration": 3,
+        "maxGroupSize": 20,
+        "price": 8000,
+        "summary": "Witness the world's largest massive camel fair in Rajasthan.",
+        "description": "Visit the Brahma Temple, Pushkar Lake, and experience the cultural vibrancy of the fair.",
+        "imageCover": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-11-15",
+            "2026-11-18"
+        ],
+        "state": "Rajasthan"
+    },
+    {
+        "name": "Ziro Valley Music Festival",
+        "duration": 5,
+        "maxGroupSize": 15,
+        "price": 18000,
+        "summary": "Music, nature, and culture in the heart of Arunachal Pradesh.",
+        "description": "Attend the Ziro Music Festival, explore the Apatani villages, and enjoy rice beer.",
+        "imageCover": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-09-25",
+            "2026-10-01"
+        ],
+        "state": "Arunachal Pradesh"
+    },
+    {
+        "name": "Bandhavgarh Tiger Trail",
+        "duration": 4,
+        "maxGroupSize": 8,
+        "price": 25000,
+        "summary": "Highest density of tigers in India.",
+        "description": "Safari in Bandhavgarh National Park, spot tigers, and visit the ancient Bandhavgarh Fort.",
+        "imageCover": "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-10",
+            "2026-05-10"
+        ],
+        "state": "Madhya Pradesh"
+    },
+    {
+        "name": "Statue of Unity Visit",
+        "duration": 2,
+        "maxGroupSize": 25,
+        "price": 5000,
+        "summary": "See the world's tallest statue.",
+        "description": "Visit the Statue of Unity, Valley of Flowers, and Sardar Sarovar Dam.",
+        "imageCover": "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-01",
+            "2026-04-01"
+        ],
+        "state": "Gujarat"
+    },
+    {
+        "name": "Lonavala Weekend Escapade",
+        "duration": 2,
+        "maxGroupSize": 15,
+        "price": 6000,
+        "summary": "Popular hill station near Mumbai with lush green valleys.",
+        "description": "Visit Bhushi Dam, Tiger Point, and Karla Caves.",
+        "imageCover": "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-07-01",
+            "2026-08-01"
+        ],
+        "state": "Maharashtra"
+    },
+    {
+        "name": "Kashmir Paradise Tour",
+        "duration": 6,
+        "maxGroupSize": 10,
+        "price": 30000,
+        "summary": "Experience the Heaven on Earth.",
+        "description": "Shikara ride on Dal Lake, visit Gulmarg for snow, and gardens of Srinagar.",
+        "imageCover": "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-15",
+            "2026-05-15"
+        ],
+        "state": "Jammu and Kashmir"
+    },
+    {
+        "name": "Kedarnath Trek",
+        "duration": 5,
+        "maxGroupSize": 10,
+        "price": 12000,
+        "summary": "A spiritual trek to the abode of Lord Shiva.",
+        "description": "Trek from Gaurikund to Kedarnath Temple, one of the Chota Char Dhams, amidst snowy peaks.",
+        "imageCover": "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1596392927242-16e6ca0896fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-05-10",
+            "2026-06-10"
+        ],
+        "state": "Uttarakhand"
+    },
+    {
+        "name": "Bodh Gaya Buddhist Circuit",
+        "duration": 3,
+        "maxGroupSize": 15,
+        "price": 8000,
+        "summary": "Visit the place where Buddha attained enlightenment.",
+        "description": "Mahabodhi Temple, Bodhi Tree, and Great Buddha Statue visit.",
+        "imageCover": "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-01",
+            "2026-04-01"
+        ],
+        "state": "Bihar"
+    },
+    {
+        "name": "Digha Beach Holiday",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 5000,
+        "summary": "Popular weekend getaway in West Bengal.",
+        "description": "Relax on New Digha Beach, enjoy sea food, and visit the Science Centre.",
+        "imageCover": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-15",
+            "2026-04-15"
+        ],
+        "state": "West Bengal"
+    },
+    {
+        "name": "Tirupati Balaji Darshan",
+        "duration": 2,
+        "maxGroupSize": 25,
+        "price": 4000,
+        "summary": "Visit the richest temple in the world.",
+        "description": "Darshan of Lord Venkateswara at Tirumala hills.",
+        "imageCover": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-01",
+            "2026-12-30"
+        ],
+        "state": "Andhra Pradesh"
+    },
+    {
+        "name": "Shillong Cherry Blossom",
+        "duration": 4,
+        "maxGroupSize": 12,
+        "price": 16000,
+        "summary": "See the pink blooms in the Scotland of the East.",
+        "description": "Ward's Lake, Elephant Falls, and Shillong Peak.",
+        "imageCover": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-11-10",
+            "2026-11-20"
+        ],
+        "state": "Meghalaya"
+    },
+    {
+        "name": "Hyderabad Heritage Walk",
+        "duration": 2,
+        "maxGroupSize": 15,
+        "price": 5000,
+        "summary": "City of Pearls and Biryani.",
+        "description": "Visit Charminar, Golconda Fort, and Ramoji Film City.",
+        "imageCover": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-10",
+            "2026-04-10"
+        ],
+        "state": "Telangana"
+    },
+    {
+        "name": "Rameswaram Temple Tour",
+        "duration": 2,
+        "maxGroupSize": 20,
+        "price": 6000,
+        "summary": "A holy pilgrimage to the southern tip of India.",
+        "description": "Ramanathaswamy Temple, Pamban Bridge, and Dhanushkodi beach.",
+        "imageCover": "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1582555314777-62464b54e339?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-03-20",
+            "2026-04-20"
+        ],
+        "state": "Tamil Nadu"
+    },
+    {
+        "name": "Jim Corbett Jungle Safari",
+        "duration": 3,
+        "maxGroupSize": 8,
+        "price": 18000,
+        "summary": "Oldest national park in India.",
+        "description": "Tiger safari in Dhikala zone and stay in a jungle resort.",
+        "imageCover": "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1562979314-bee7453e911c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        ],
+        "startDates": [
+            "2026-04-05",
+            "2026-05-05"
+        ],
+        "state": "Uttarakhand"
+    }
+]
