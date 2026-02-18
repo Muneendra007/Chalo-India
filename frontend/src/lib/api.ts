@@ -28,6 +28,7 @@ export const logout = () => api.get('/users/logout');
 export const getMyBookings = () => api.get('/bookings');
 export const createBooking = (data: any) => api.post('/bookings', data);
 export const cancelBooking = (id: string) => api.delete(`/bookings/${id}`);
+export const deleteBooking = cancelBooking; // Alias for admin usage
 export const updateBooking = (id: string, data: any) => api.patch(`/bookings/${id}`, data);
 
 export const getAllUsers = () => api.get('/users');
