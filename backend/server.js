@@ -37,7 +37,7 @@ const corsOptions = {
             (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL)) {
             return callback(null, true);
         }
-        return callback(new Error('Not allowed by CORS'));
+        return callback(new Error('Not allowed by CORS. Origin: ' + origin));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
