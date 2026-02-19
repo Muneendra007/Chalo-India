@@ -21,9 +21,8 @@ const app = express();
 
 app.use(passport.initialize());
 
-// Middleware
-app.use(helmet());
-app.use(cors({
+// Middleware — CORS must be before Helmet so preflight responses aren't blocked
+const corsOptions = {
     origin: (origin, callback) => {
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
@@ -43,6 +42,14 @@ app.use(cors({
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+};
+app.use(cors(corsOptions));
+// Explicitly handle preflight OPTIONS requests
+app.options('*', cors(corsOptions));
+
+app.use(helmet({
+    crossOriginResourcePolicy: false,
+    crossOriginOpenerPolicy: false
 }));
 
 if (process.env.NODE_ENV === 'development') {
