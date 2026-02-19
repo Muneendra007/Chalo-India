@@ -27,12 +27,22 @@ app.use(cors({
     origin: (origin, callback) => {
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
-        if (origin.startsWith('http://localhost') || origin.startsWith('http://127.0.0.1') || origin.includes('vercel.app')) {
+        const allowedPatterns = [
+            'http://localhost',
+            'http://127.0.0.1',
+            'vercel.app',
+            'onrender.com'
+        ];
+        // Allow if origin matches any pattern or the FRONTEND_URL env variable
+        if (allowedPatterns.some(pattern => origin.includes(pattern)) ||
+            (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL)) {
             return callback(null, true);
         }
         return callback(new Error('Not allowed by CORS'));
     },
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
 if (process.env.NODE_ENV === 'development') {
