@@ -19,32 +19,32 @@ connectDB();
 
 const app = express();
 
-app.use(passport.initialize());
-
-// 1) Manual CORS Middleware (Ensures headers stay even if 500 error occurs)
+// 1) Logging Middleware (FIRST)
 app.use((req, res, next) => {
-    const origin = req.get('Origin');
-    const allowedPatterns = ['localhost', '127.0.0.1', 'vercel.app', 'onrender.com'];
-
-    if (origin && (allowedPatterns.some(p => origin.includes(p)) || origin === process.env.FRONTEND_URL)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Cache-Control');
-        res.setHeader('Access-Control-Allow-Credentials', 'true');
-    }
-
-    // Handle Preflight
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    console.log('Incoming Origin:', req.headers.origin);
     next();
 });
 
+// 2) Permissive CORS for Debugging (Echos Origin)
+app.use(cors({
+    origin: true,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Cache-Control']
+}));
+
+// 3) Handle Preflight for all routes
+app.options('*', cors());
+
+// 4) Other Security Middlewares
 app.use(helmet({
     crossOriginResourcePolicy: false,
     crossOriginOpenerPolicy: false,
     contentSecurityPolicy: false
 }));
+
+app.use(passport.initialize());
 
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
