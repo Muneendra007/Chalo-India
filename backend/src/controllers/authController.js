@@ -69,17 +69,20 @@ exports.signup = async (req, res, next) => {
         }
 
         try {
+            console.log('Attempting to send OTP email to:', user.email);
             await sendEmail({
                 email: user.email,
                 subject: 'Your OTP for Chalo India Signup',
                 message: `Your OTP is ${otp}. It expires in 10 minutes.`
             });
+            console.log('OTP email sent successfully');
 
             res.status(200).json({
                 status: 'success',
                 message: 'OTP sent to email!'
             });
         } catch (err) {
+            console.error('Email sending failed:', err.message);
             user.otp = undefined;
             user.otpExpires = undefined;
             await user.save({ validateBeforeSave: false });
