@@ -24,24 +24,34 @@ app.use(passport.initialize());
 // Middleware — CORS must be before Helmet so preflight responses aren't blocked
 const corsOptions = {
     origin: (origin, callback) => {
+        // Log the origin to help debugging in Render logs
+        console.log('Incoming Request Origin:', origin);
+
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
+
         const allowedPatterns = [
-            'http://localhost',
-            'http://127.0.0.1',
+            'localhost',
+            '127.0.0.1',
             'vercel.app',
             'onrender.com'
         ];
-        // Allow if origin matches any pattern or the FRONTEND_URL env variable
-        if (allowedPatterns.some(pattern => origin.includes(pattern)) ||
-            (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL)) {
-            return callback(null, true);
+
+        // Check if origin contains any of the allowed patterns
+        const isAllowed = allowedPatterns.some(pattern => origin.includes(pattern)) ||
+            (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL);
+
+        if (isAllowed) {
+            callback(null, true);
+        } else {
+            console.error('CORS blocked for origin:', origin);
+            callback(null, false); // Standard way to deny CORS
         }
-        return callback(new Error('Not allowed by CORS. Origin: ' + origin));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+    exposedHeaders: ['Set-Cookie']
 };
 app.use(cors(corsOptions));
 // Explicitly handle preflight OPTIONS requests
@@ -82,6 +92,8 @@ const tourRouter = require('./src/routes/tourRoutes');
 const userRouter = require('./src/routes/userRoutes');
 const bookingRouter = require('./src/routes/bookingRoutes');
 const reviewRouter = require('./src/routes/reviewRoutes');
+
+
 
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
