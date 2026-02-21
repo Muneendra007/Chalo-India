@@ -1,3 +1,4 @@
+// Force Redeployment Fix - 21-02-2026
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { ToastProvider } from './contexts/ToastContext';
