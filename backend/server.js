@@ -26,9 +26,9 @@ app.use((req, res, next) => {
     next();
 });
 
-// 2) Permissive CORS for Debugging (Echos Origin)
+// 2) Permissive CORS (Echos Origin - Most robust for debugging)
 app.use(cors({
-    origin: true,
+    origin: (origin, callback) => callback(null, true),
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Cache-Control']
