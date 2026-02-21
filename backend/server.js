@@ -21,45 +21,29 @@ const app = express();
 
 app.use(passport.initialize());
 
-// Middleware — CORS must be before Helmet so preflight responses aren't blocked
-const corsOptions = {
-    origin: (origin, callback) => {
-        // Log the origin to help debugging in Render logs
-        console.log('Incoming Request Origin:', origin);
+// 1) Manual CORS Middleware (Ensures headers stay even if 500 error occurs)
+app.use((req, res, next) => {
+    const origin = req.get('Origin');
+    const allowedPatterns = ['localhost', '127.0.0.1', 'vercel.app', 'onrender.com'];
 
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
+    if (origin && (allowedPatterns.some(p => origin.includes(p)) || origin === process.env.FRONTEND_URL)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Cache-Control');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+    }
 
-        const allowedPatterns = [
-            'localhost',
-            '127.0.0.1',
-            'vercel.app',
-            'onrender.com'
-        ];
-
-        // Check if origin contains any of the allowed patterns
-        const isAllowed = allowedPatterns.some(pattern => origin.includes(pattern)) ||
-            (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL);
-
-        if (isAllowed) {
-            callback(null, true);
-        } else {
-            console.error('CORS blocked for origin:', origin);
-            callback(null, false); // Standard way to deny CORS
-        }
-    },
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
-    exposedHeaders: ['Set-Cookie']
-};
-app.use(cors(corsOptions));
-// Explicitly handle preflight OPTIONS requests
-app.options('*', cors(corsOptions));
+    // Handle Preflight
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+    next();
+});
 
 app.use(helmet({
     crossOriginResourcePolicy: false,
-    crossOriginOpenerPolicy: false
+    crossOriginOpenerPolicy: false,
+    contentSecurityPolicy: false
 }));
 
 if (process.env.NODE_ENV === 'development') {
