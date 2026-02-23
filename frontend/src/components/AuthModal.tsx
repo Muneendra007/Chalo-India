@@ -15,7 +15,11 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
   const [otp, setOtp] = useState('');
+  const [resetOtp, setResetOtp] = useState('');
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
+  const [isResetPassword, setIsResetPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { signIn } = useAuth(); // We'll handle signup/verify manually here to manage state
@@ -29,7 +33,17 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
     setLoading(true);
 
     try {
-      if (isSignUp) {
+      if (isForgotPassword) {
+        await api.forgotPassword({ email });
+        success('Password reset OTP sent to your email!');
+        setIsForgotPassword(false);
+        setIsResetPassword(true);
+      } else if (isResetPassword) {
+        await api.resetPassword({ email, otp: resetOtp, password: newPassword });
+        success('Password reset successfully! You can now sign in.');
+        setIsResetPassword(false);
+        setIsSignUp(false);
+      } else if (isSignUp) {
         if (!showOTP) {
           // Step 1: Request Signup (Send OTP)
           await api.signup({ name, email, password, passwordConfirm: password });
@@ -37,14 +51,10 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           success('OTP sent to your email!');
         } else {
           // Step 2: Verify OTP
-          // Verify and get token
           const res = await api.verifyOTP({ email, otp });
-          // Manually sign in (update context/localStorage) - effectively same as login
-          // Since useAuth doesn't expose a 'setSession' method easily, we might need to reload or rely on auto-fetch
-          // But api.verifyOTP returns token.
           localStorage.setItem('token', res.data.token);
           localStorage.setItem('user', JSON.stringify(res.data.data.user));
-          window.location.reload(); // Quick fix to refresh auth state
+          window.location.reload();
         }
       } else {
         await signIn({ email, password });
@@ -77,10 +87,10 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         <div className="p-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-serif text-white mb-2">
-              {isSignUp ? (showOTP ? 'Verify Email' : 'Create Account') : 'Welcome Back'}
+              {isForgotPassword ? 'Forgot Password' : isResetPassword ? 'Reset Password' : isSignUp ? (showOTP ? 'Verify Email' : 'Create Account') : 'Welcome Back'}
             </h2>
             <p className="text-white/60">
-              {isSignUp ? (showOTP ? 'Enter the code sent to your email' : 'Start your adventure today') : 'Sign in to continue'}
+              {isForgotPassword ? 'Enter your email to receive a reset OTP' : isResetPassword ? 'Enter the OTP from your email and your new password' : isSignUp ? (showOTP ? 'Enter the code sent to your email' : 'Start your adventure today') : 'Sign in to continue'}
             </p>
           </div>
 
@@ -99,7 +109,48 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               </div>
             )}
 
-            {!showOTP && (
+            {isForgotPassword && (
+              <div className="relative">
+                <Mail className="absolute left-4 top-3.5 w-5 h-5 text-white/40" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-emerald-500/50 transition"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+            )}
+
+            {isResetPassword && (
+              <>
+                <div className="relative">
+                  <Lock className="absolute left-4 top-3.5 w-5 h-5 text-white/40" />
+                  <input
+                    type="text"
+                    value={resetOtp}
+                    onChange={(e) => setResetOtp(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-emerald-500/50 transition"
+                    placeholder="Enter Reset OTP"
+                    required
+                  />
+                </div>
+                <div className="relative">
+                  <Lock className="absolute left-4 top-3.5 w-5 h-5 text-white/40" />
+                  <input
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-emerald-500/50 transition"
+                    placeholder="New Password"
+                    required
+                  />
+                </div>
+              </>
+            )}
+
+            {!showOTP && !isForgotPassword && !isResetPassword && (
               <>
                 <div className="relative">
                   <Mail className="absolute left-4 top-3.5 w-5 h-5 text-white/40" />
@@ -124,6 +175,17 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     required
                   />
                 </div>
+                {!isSignUp && (
+                  <div className="flex justify-end">
+                    <button
+                      type="button"
+                      onClick={() => setIsForgotPassword(true)}
+                      className="text-xs text-white/40 hover:text-white transition"
+                    >
+                      Forgot Password?
+                    </button>
+                  </div>
+                )}
               </>
             )}
 
@@ -155,12 +217,12 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               disabled={loading}
               className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl font-bold shadow-lg shadow-emerald-600/20 transition disabled:opacity-50 flex items-center justify-center space-x-2"
             >
-              <span>{loading ? 'Processing...' : isSignUp ? (showOTP ? 'Verify & Create Account' : 'Send OTP') : 'Sign In'}</span>
+              <span>{loading ? 'Processing...' : isForgotPassword ? 'Send Reset OTP' : isResetPassword ? 'Reset Password' : isSignUp ? (showOTP ? 'Verify & Create Account' : 'Send OTP') : 'Sign In'}</span>
               {!loading && <ArrowRight className="w-4 h-4" />}
             </button>
           </form>
 
-          {!showOTP && (
+          {!showOTP && !isForgotPassword && !isResetPassword && (
             <>
               <div className="relative my-6">
                 <div className="absolute inset-0 flex items-center">
@@ -184,13 +246,18 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           <div className="mt-8 text-center">
             <button
               onClick={() => {
-                setIsSignUp(!isSignUp);
+                if (isForgotPassword || isResetPassword) {
+                  setIsForgotPassword(false);
+                  setIsResetPassword(false);
+                } else {
+                  setIsSignUp(!isSignUp);
+                }
                 setShowOTP(false);
                 setError('');
               }}
               className="text-white/60 hover:text-white transition text-sm hover:underline"
             >
-              {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Sign up"}
+              {isForgotPassword || isResetPassword ? 'Back to Login' : isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Sign up"}
             </button>
           </div>
         </div>

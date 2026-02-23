@@ -39,6 +39,13 @@ export interface User {
     name: string;
     email: string;
     role: string;
+    photo?: string;
+    phone?: string;
+    address?: string;
+    bio?: string;
+    preferences?: string[];
+    dateOfBirth?: string;
+    wishlist?: string[];
 }
 
 export interface Booking {

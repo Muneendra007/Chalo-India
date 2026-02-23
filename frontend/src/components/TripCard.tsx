@@ -1,13 +1,15 @@
-import { Calendar, Users, DollarSign } from 'lucide-react';
+import { Calendar, Users, DollarSign, Heart } from 'lucide-react';
 import { Trip } from '../types';
 
 interface TripCardProps {
   trip: Trip;
   onBook: (trip: Trip) => void;
   onViewDetails: (trip: Trip) => void;
+  onToggleWishlist?: (trip: Trip) => void;
+  isWishlisted?: boolean;
 }
 
-export function TripCard({ trip, onBook, onViewDetails }: TripCardProps) {
+export function TripCard({ trip, onBook, onViewDetails, onToggleWishlist, isWishlisted }: TripCardProps) {
   // Use first start date for display
   const nextDate = trip.startDates && trip.startDates.length > 0 ? trip.startDates[0] : new Date().toISOString();
 
@@ -30,6 +32,17 @@ export function TripCard({ trip, onBook, onViewDetails }: TripCardProps) {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+        {/* Wishlist Toggle */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleWishlist?.(trip);
+          }}
+          className={`absolute top-4 right-4 p-2 rounded-full backdrop-blur-md border transition-all duration-300 ${isWishlisted ? 'bg-rose-500 border-rose-400/50 text-white shadow-lg shadow-rose-500/20' : 'bg-black/20 border-white/20 text-white/70 hover:text-white hover:bg-black/40'}`}
+        >
+          <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
+        </button>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">

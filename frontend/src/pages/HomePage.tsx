@@ -23,6 +23,7 @@ export function HomePage() {
     const [showTripDetails, setShowTripDetails] = useState(false);
     const [showMyTrips, setShowMyTrips] = useState(false);
     const [viewAllMode, setViewAllMode] = useState(false);
+    const [wishlistIds, setWishlistIds] = useState<string[]>([]);
 
     useEffect(() => {
         const fetchTours = async () => {
@@ -36,7 +37,10 @@ export function HomePage() {
         };
 
         fetchTours();
-    }, []);
+        if (user) {
+            setWishlistIds(user.wishlist || []);
+        }
+    }, [user]);
 
     /* Create suggestions list from tours */
     const suggestions = Array.from(new Set(
@@ -105,6 +109,20 @@ export function HomePage() {
         setShowTripDetails(true);
     };
 
+    const handleToggleWishlist = async (trip: Trip) => {
+        if (!user) {
+            setShowAuthModal(true);
+            return;
+        }
+        try {
+            const tourId = trip.id || trip._id;
+            const res = await api.toggleWishlist(tourId);
+            setWishlistIds(res.data.data.wishlist);
+        } catch (error) {
+            console.error('Error toggling wishlist:', error);
+        }
+    };
+
     let displayedTours = filteredTours;
 
     if (!user) {
@@ -123,9 +141,6 @@ export function HomePage() {
             <Header
                 onAuthClick={() => setShowAuthModal(true)}
                 onBookingsClick={() => setShowMyTrips(true)}
-                onExploreClick={() => {
-                    document.getElementById('trips')?.scrollIntoView({ behavior: 'smooth' });
-                }}
             />
 
             <Hero onSearch={handleSearch} suggestions={suggestions} />
@@ -175,6 +190,8 @@ export function HomePage() {
                                 trip={tour}
                                 onBook={() => handleBookTrip(tour)}
                                 onViewDetails={() => handleViewDetails(tour)}
+                                onToggleWishlist={() => handleToggleWishlist(tour)}
+                                isWishlisted={wishlistIds.includes(tour.id || tour._id)}
                             />
                         ))}
                     </div>

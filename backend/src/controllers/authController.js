@@ -221,6 +221,106 @@ exports.updatePassword = async (req, res, next) => {
 
 exports.googleAuthCallback = (req, res) => {
     // req.user contains the authenticated user from Passport
-    createSendToken(req.user, 200, res);
+    const token = signToken(req.user._id);
+
+    // Set cookie for browsers that support it (optional but good for consistency)
+    const cookieOptions = {
+        expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        httpOnly: true
+    };
+    if (process.env.NODE_ENV === 'production') {
+        cookieOptions.secure = true;
+        cookieOptions.sameSite = 'none';
+    }
+    res.cookie('jwt', token, cookieOptions);
+
+    // Redirect to frontend with token
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+    res.redirect(`${frontendUrl}/?token=${token}`);
+};
+
+exports.forgotPassword = async (req, res, next) => {
+    try {
+        // 1) Get user based on POSTed email
+        const user = await User.findOne({ email: req.body.email });
+        if (!user) {
+            return res.status(404).json({ status: 'fail', message: 'There is no user with that email address.' });
+        }
+
+        // 2) Generate a 6-digit OTP
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+
+        // Use the same hashing logic for consistency, or store plain if preferred for simple OTPs
+        const hashedOTP = crypto
+            .createHash('sha256')
+            .update(otp)
+            .digest('hex');
+
+        user.passwordResetToken = hashedOTP;
+        user.passwordResetExpires = Date.now() + 10 * 60 * 1000; // 10 mins
+        await user.save({ validateBeforeSave: false });
+
+        // 3) Send it to user's email
+        const message = `Your password reset OTP is ${otp}. It is valid for 10 minutes.\nIf you didn't forget your password, please ignore this email!`;
+
+        try {
+            await sendEmail({
+                email: user.email,
+                subject: 'Your password reset OTP (valid for 10 min)',
+                message
+            });
+
+            res.status(200).json({
+                status: 'success',
+                message: 'OTP sent to email!',
+                otp: process.env.NODE_ENV === 'development' ? otp : undefined
+            });
+        } catch (err) {
+            user.passwordResetToken = undefined;
+            user.passwordResetExpires = undefined;
+            await user.save({ validateBeforeSave: false });
+
+            return res.status(500).json({ status: 'fail', message: 'There was an error sending the email. Try again later!' });
+        }
+    } catch (err) {
+        res.status(400).json({ status: 'fail', message: err.message });
+    }
+};
+
+exports.resetPassword = async (req, res, next) => {
+    try {
+        const { email, otp, password } = req.body;
+
+        if (!email || !otp || !password) {
+            return res.status(400).json({ status: 'fail', message: 'Please provide email, OTP and new password' });
+        }
+
+        // 1) Get user based on the hashed OTP
+        const hashedToken = crypto
+            .createHash('sha256')
+            .update(otp)
+            .digest('hex');
+
+        const user = await User.findOne({
+            email,
+            passwordResetToken: hashedToken,
+            passwordResetExpires: { $gt: Date.now() }
+        });
+
+        // 2) If OTP has not expired, and there is user, set the new password
+        if (!user) {
+            return res.status(400).json({ status: 'fail', message: 'OTP is invalid or has expired' });
+        }
+        user.password = req.body.password;
+        user.passwordConfirm = req.body.passwordConfirm || req.body.password;
+        user.passwordResetToken = undefined;
+        user.passwordResetExpires = undefined;
+        await user.save();
+
+        // 3) Log the user in, send JWT
+        createSendToken(user, 201, res);
+    } catch (err) {
+        res.status(400).json({ status: 'fail', message: err.message });
+    }
 };
 

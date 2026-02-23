@@ -3,29 +3,22 @@ import { Link } from 'react-router-dom';
 import {
   MapPin, User, LogOut, ChevronDown,
   Palmtree, Settings,
-  Menu, X as XIcon
+  Menu, X as XIcon, Home
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
-import { SettingsModal } from './SettingsModal';
 
 interface HeaderProps {
   onAuthClick: () => void;
   onBookingsClick: () => void;
-  onExploreClick: () => void;
-  onAdminClick?: () => void;
 }
 
-export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminClick }: HeaderProps) {
-
-
-  // ... inside Header component
+export function Header({ onAuthClick, onBookingsClick }: HeaderProps) {
   const { user, signOut } = useAuth();
   const { info } = useToast();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,8 +30,9 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
   }, []);
 
   const navItems = [
-    { label: 'Destinations', icon: MapPin },
-    { label: 'Tours', icon: Palmtree },
+    { label: 'Home', icon: Home, path: '/' },
+    { label: 'Destinations', icon: MapPin, path: '/#trips' },
+    { label: 'Tours', icon: Palmtree, path: '/#trips' },
   ];
 
   return (
@@ -62,27 +56,27 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
         <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          <Link to="/" className="flex items-center space-x-2 group cursor-pointer">
+            <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition duration-300">
               <MapPin className="w-6 h-6 text-white transform -rotate-12" />
             </div>
             <div>
-              <h1 className="text-xl font-serif text-white tracking-wide leading-none">Chalo India</h1>
+              <h1 className="text-xl font-serif text-white tracking-wide leading-none group-hover:text-emerald-400 transition">Chalo India</h1>
               <p className="text-[10px] text-white/50 tracking-[0.2em] uppercase">Premium Travel</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Nav Items */}
           <div className="hidden lg:flex items-center space-x-1 bg-white/5 rounded-full p-1 border border-white/5 backdrop-blur-sm">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={onExploreClick}
+                to={item.path}
                 className="flex items-center space-x-2 px-4 py-2 rounded-full hover:bg-white/10 text-white/80 hover:text-white transition group"
               >
                 <item.icon className="w-4 h-4 text-emerald-400/70 group-hover:text-emerald-400 transition" />
                 <span className="text-sm font-medium">{item.label}</span>
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -121,13 +115,13 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
                         <Palmtree className="w-4 h-4" />
                         <span>My Trips</span>
                       </button>
-                      <button
-                        onClick={() => setShowSettings(true)}
+                      <Link
+                        to="/profile"
                         className="flex items-center space-x-3 w-full px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition"
                       >
                         <Settings className="w-4 h-4" />
                         <span>My Profile</span>
-                      </button>
+                      </Link>
                       <button
                         onClick={() => signOut()}
                         className="flex items-center space-x-3 w-full px-3 py-2.5 text-sm text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition"
@@ -165,17 +159,15 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
         <div className="lg:hidden bg-slate-900 border-t border-white/10 absolute left-0 right-0 p-6 shadow-2xl animate-in slide-in-from-top-5">
           <div className="grid grid-cols-2 gap-4 mb-6">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => {
-                  onExploreClick();
-                  setMobileMenuOpen(false);
-                }}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
                 className="flex flex-col items-center justify-center p-4 bg-white/5 rounded-xl border border-white/5 active:scale-95 transition"
               >
                 <item.icon className="w-6 h-6 text-emerald-400 mb-2" />
                 <span className="text-sm text-white">{item.label}</span>
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -201,16 +193,14 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
                   <Palmtree className="w-5 h-5 text-emerald-400" />
                   <span>My Trips</span>
                 </button>
-                <button
-                  onClick={() => {
-                    setShowSettings(true);
-                    setMobileMenuOpen(false);
-                  }}
+                <Link
+                  to="/profile"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center space-x-3 px-4 py-3 bg-white/5 rounded-lg text-white"
                 >
                   <Settings className="w-5 h-5 text-emerald-400" />
                   <span>My Profile</span>
-                </button>
+                </Link>
                 <button
                   onClick={() => {
                     signOut();
@@ -236,8 +226,6 @@ export function Header({ onAuthClick, onBookingsClick, onExploreClick, onAdminCl
           </div>
         </div>
       )}
-
-      <SettingsModal isOpen={showSettings} onClose={() => setShowSettings(false)} />
     </header>
   );
 }

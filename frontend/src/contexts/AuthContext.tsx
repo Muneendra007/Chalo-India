@@ -22,18 +22,41 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const checkUserLoggedIn = async () => {
     try {
-      // We don't have a direct /me endpoint in the initial plan, 
-      // but usually we'd check if a cookie exists by making a protected call
-      // or decodig a local token. For now, since we use httpOnly cookies,
-      // we can try fetching bookings or a profile endpoint.
-      // Let's assume we store user info in localStorage for UI persistence 
-      // OR better, add a /me endpoint in backend later. 
-      // For this step, we'll try to get bookings as a "session check" equivalent
-      // If 401, we are not logged in.
+      // 1) Check for token in URL (Google Auth Redirect)
+      const urlParams = new URLSearchParams(window.location.search);
+      const tokenFromUrl = urlParams.get('token');
 
+      if (tokenFromUrl) {
+        localStorage.setItem('token', tokenFromUrl);
+        // Remove token from URL for clean UI
+        const newUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, document.title, newUrl);
+
+        // Fetch user data with the new token
+        const res = await api.getMe();
+        const userData = res.data.data.user;
+        setUser(userData);
+        localStorage.setItem('user', JSON.stringify(userData));
+        return;
+      }
+
+      // 2) Check for existing session
       const storedUser = localStorage.getItem('user');
-      if (storedUser) {
+      const token = localStorage.getItem('token');
+
+      if (storedUser && token) {
         setUser(JSON.parse(storedUser));
+        // Optionally: Verify token validity by calling /me
+        try {
+          const res = await api.getMe();
+          setUser(res.data.data.user);
+          localStorage.setItem('user', JSON.stringify(res.data.data.user));
+        } catch (err) {
+          // If token is invalid, clear storage
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          setUser(null);
+        }
       }
     } catch (err) {
       setUser(null);
@@ -44,19 +67,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async (data: any) => {
     const res = await api.login(data);
-    setUser(res.data.data.user);
-    localStorage.setItem('user', JSON.stringify(res.data.data.user));
+    const { token, data: { user } } = res.data;
+    setUser(user);
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
   };
 
   const signUp = async (data: any) => {
     const res = await api.signup(data);
-    setUser(res.data.data.user);
-    localStorage.setItem('user', JSON.stringify(res.data.data.user));
+    const { token, data: { user } } = res.data;
+    setUser(user);
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
   };
 
   const signOut = async () => {
     await api.logout();
     setUser(null);
+    localStorage.removeItem('token');
     localStorage.removeItem('user');
   };
 

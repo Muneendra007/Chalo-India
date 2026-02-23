@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { X, Plus, Trash } from 'lucide-react';
-import { Trip } from '../../types';
+import { Trip } from '../types';
 
 interface AdminTourModalProps {
     isOpen: boolean;
